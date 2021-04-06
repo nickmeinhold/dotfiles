@@ -1,13 +1,12 @@
 ### alias
 ############
-
+alias rc="open ~/.zshrc"
+alias prune="git remote prune origin"
 alias fpg="flutter pub get"
 alias fprb="flutter pub run build_runner build"
 alias fprbd="flutter pub run build_runner build --delete-conflicting-outputs"
 alias fprw="flutter pub run build_runner watch"
 alias fprwd="flutter pub run build_runner watch --delete-conflicting-outputs"
-alias prune="git remote prune origin"
-alias rc="open ~/.zshrc"
 
 ### flutter
 ############
@@ -45,3 +44,13 @@ if [ -f '/Users/nick/Documents/SDKs/google-cloud-sdk/path.zsh.inc' ]; then . '/U
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/nick/Documents/SDKs/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nick/Documents/SDKs/google-cloud-sdk/completion.zsh.inc'; fi
+
+### oh my zsh 
+############
+
+plugins=(zsh-syntax-highlighting)
+ZSH_THEME="robbyrussell"
+
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/nick/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
