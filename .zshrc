@@ -12,16 +12,16 @@ alias fprwd="flutter pub run build_runner watch --delete-conflicting-outputs"
 ############
 
 # add flutter to the path 
-export PATH=$PATH:/Users/nick/Documents/SDKs/flutter/bin
+export PATH=$PATH:/Users/nick/SDKs/flutter/bin
 
 ### dart 
 ############
 
-# add flutter's dart/bin folder to the path 
-export PATH=/Users/nick/Documents/SDKs/flutter/bin/cache/dart-sdk/bin:$PATH
-
 # globally installed dart packages
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+# add flutter's dart/bin folder to the path 
+export PATH=/Users/nick/SDKs/flutter/bin/cache/dart-sdk/bin:$PATH
 
 ### npm 
 ############
@@ -40,10 +40,10 @@ export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 ############
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/nick/Documents/SDKs/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nick/Documents/SDKs/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/nick/SDKs/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nick/SDKs/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/nick/Documents/SDKs/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nick/Documents/SDKs/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/nick/SDKs/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nick/SDKs/google-cloud-sdk/completion.zsh.inc'; fi
 
 ### oh my zsh 
 ############

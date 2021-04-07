@@ -1,1 +1,1 @@
-ln -sv ~/.dotfiles/.zshrc ~
+ln -svf ~/.dotfiles/.zshrc ~
