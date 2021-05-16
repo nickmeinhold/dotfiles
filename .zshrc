@@ -1,13 +1,18 @@
 ### alias
 ############
 alias rc="open ~/.zshrc"
-alias grs1="git reset --soft HEAD~1"
+alias grsh1="git reset --soft HEAD~1"
 alias prune="git remote prune origin"
 alias fpg="flutter pub get"
-alias fprb="flutter pub run build_runner build"
-alias fprbd="flutter pub run build_runner build --delete-conflicting-outputs"
-alias fprw="flutter pub run build_runner watch"
-alias fprwd="flutter pub run build_runner watch --delete-conflicting-outputs"
+alias fpu="flutter pub upgrade"
+alias fprbb="flutter pub run build_runner build"
+alias fprbbd="flutter pub run build_runner build --delete-conflicting-outputs"
+alias fprbw="flutter pub run build_runner watch"
+alias fprbwd="flutter pub run build_runner watch --delete-conflicting-outputs"
+alias prbb="pub run build_runner build"
+alias prbbd="pub run build_runner build --delete-conflicting-outputs"
+alias prbw="pub run build_runner watch"
+alias prbwd="pub run build_runner watch --delete-conflicting-outputs"
 
 ### flutter
 ############
