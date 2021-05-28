@@ -29,15 +29,6 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 # add flutter's dart/bin folder to the path 
 export PATH=/Users/nick/SDKs/flutter/bin/cache/dart-sdk/bin:$PATH
 
-### fuchsia 
-############
-
-# the jiri and fx tools are essential to Fuchsia workflows
-export PATH="/Users/nick/fuchsia/.jiri_root/bin:$PATH"
-
-# the fx-env.sh script enables useful shell functions
-source ~/fuchsia/scripts/fx-env.sh
-
 ### npm 
 ############
 
