@@ -14,7 +14,7 @@ alias prbbd="pub run build_runner build --delete-conflicting-outputs"
 alias prbw="pub run build_runner watch"
 alias prbwd="pub run build_runner watch --delete-conflicting-outputs"
 alias devtools_activate="dart pub global activate --source path /Users/nick/git/languages/dart/contributing/devtools/packages/devtools"
-alias devtools_rebuild="cd /Users/nick/git/languages/dart/contributing/devtools && ./rebuild.sh && dart pub global activate --source path ./packages/devtools"
+alias devtools_rebuild="cd /Users/nick/git/languages/dart/contributing/devtools && ./tool/update_flutter_sdk.sh && ./rebuild.sh && dart pub global activate --source path ./packages/devtools"
 
 ### flutter
 ############
