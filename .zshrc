@@ -20,28 +20,19 @@ alias devtools_rebuild="cd /Users/nick/git/languages/dart/contributing/devtools 
 ############
 
 # add flutter to the path 
-path+=('~/SDKs/flutter/bin')
+path+=~/SDKs/flutter/bin
 
 ### dart 
 ############
 
 # globally installed dart packages
-path+=('~/.pub-cache/bin')
+path+=~/.pub-cache/bin
 
-### npm 
-############
-
-# add globally installed npm packages to the path
-path+=('~/.npm-global/bin')
-
-### gcloud 
-############
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/SDKs/google-cloud-sdk/path.zsh.inc' ]; then . '~/SDKs/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '~/SDKs/google-cloud-sdk/completion.zsh.inc' ]; then . '~/SDKs/google-cloud-sdk/completion.zsh.inc'; fi
+### path
+# export to sub-processes (make it inherited by child processes)
+export PATH
+# set the environment used by launchd
+launchctl setenv PATH $PATH
 
 ### oh my zsh 
 ############
@@ -52,6 +43,3 @@ ZSH_THEME="robbyrussell"
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/nick/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
-
-# export to sub-processes (make it inherited by child processes)
-export PATH
