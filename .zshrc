@@ -9,6 +9,8 @@ alias fprbb="flutter pub run build_runner build"
 alias fprbbd="flutter pub run build_runner build --delete-conflicting-outputs"
 alias fprbw="flutter pub run build_runner watch"
 alias fprbwd="flutter pub run build_runner watch --delete-conflicting-outputs"
+alias dpg="dart pub get"
+alias dpu="dart pub upgrade"
 alias drbb="dart run build_runner build"
 alias drbbd="dart run build_runner build --delete-conflicting-outputs"
 alias drbw="dart run build_runner watch"
@@ -27,6 +29,12 @@ path+=~/SDKs/flutter/bin
 
 # globally installed dart packages
 path+=~/.pub-cache/bin
+
+### npm 
+############
+
+# globally installed npm packages
+# path+=~/.npm-global/bin
 
 ### path
 # export to sub-processes (make it inherited by child processes)
