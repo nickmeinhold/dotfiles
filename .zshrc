@@ -19,17 +19,21 @@ alias drbwd="dart run build_runner watch --delete-conflicting-outputs"
 alias devtools_activate="dart pub global activate --source path /Users/nick/git/languages/dart/contributing/devtools/packages/devtools"
 alias devtools_rebuild="cd /Users/nick/git/languages/dart/contributing/devtools && ./tool/update_flutter_sdk.sh && ./rebuild.sh && dart pub global activate --source path ./packages/devtools"
 
-### flutter
+# Add Visual Studio Code (code)
+path+='/Applications/Visual Studio Code.app/Contents/Resources/app/bin'
+
+# Use the JRE bundled with Android Studio
+export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/Contents/Home'
+
+### flutter & dart
 ############
 
 # add flutter to the path 
 path+=~/SDKs/flutter/bin
 
-### dart 
-############
-
-# globally installed dart packages
+# globally installed packages
 path+=~/.pub-cache/bin
+path+=~/SDKs/flutter/.pub-cache/bin
 
 ### npm 
 ############
@@ -47,8 +51,8 @@ launchctl setenv PATH $PATH
 ############
 
 plugins=(zsh-syntax-highlighting)
-ZSH_THEME="robbyrussell"
+ZSH_THEME='robbyrussell'
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/nick/.oh-my-zsh"
+export ZSH='/Users/nick/.oh-my-zsh'
 source $ZSH/oh-my-zsh.sh
