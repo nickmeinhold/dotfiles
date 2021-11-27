@@ -1,18 +1,23 @@
 # dotfiles
+
 Dotfiles for macOS.
 
-### Updating
+## Install methods
 
-#### node & npm
+Cocoapods
+
+## Updating
+
+### node & npm
 
 Download installer from https://nodejs.org/en/download/
 
-#### firebase
+### firebase
 
 Run `curl -sL firebase.tools | upgrade=true bash`
 
 Reference: https://firebase.google.com/docs/cli#macos
 
-### Relevant Resources
+## Relevant Resources
 
 - [Getting Started With Dotfiles](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)

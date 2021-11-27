@@ -56,3 +56,12 @@ ZSH_THEME='robbyrussell'
 # Path to your oh-my-zsh installation.
 export ZSH='/Users/nick/.oh-my-zsh'
 source $ZSH/oh-my-zsh.sh
+
+### gcloud
+############
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/nick/SDKs/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nick/SDKs/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/nick/SDKs/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nick/SDKs/google-cloud-sdk/completion.zsh.inc'; fi
