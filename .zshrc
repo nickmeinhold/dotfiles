@@ -1,16 +1,19 @@
 ### alias
 ############
+alias mp="cd ~/git/orgs/enspyrco/monorepo/packages"
 alias rc="open ~/.zshrc"
 alias grsh1="git reset --soft HEAD~1"
 alias prune="git remote prune origin"
 alias fpg="flutter pub get"
 alias fpu="flutter pub upgrade"
 alias fpo="flutter pub outdated"
+alias fpa="flutter pub add"
 alias fprbb="flutter pub run build_runner build"
 alias fprbbd="flutter pub run build_runner build --delete-conflicting-outputs"
 alias fprbw="flutter pub run build_runner watch"
 alias fprbwd="flutter pub run build_runner watch --delete-conflicting-outputs"
 alias dpg="dart pub get"
+alias dpa="dart pub add"
 alias dpu="dart pub upgrade"
 alias drbb="dart run build_runner build"
 alias drbbd="dart run build_runner build --delete-conflicting-outputs"
@@ -40,6 +43,11 @@ path+=~/SDKs/flutter/.pub-cache/bin
 
 # globally installed npm packages
 # path+=~/.npm-global/bin
+
+### build tools 
+############
+
+path+=~/SDKs/depot_tools
 
 ### path
 # export to sub-processes (make it inherited by child processes)
