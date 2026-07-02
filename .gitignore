@@ -1,0 +1,5 @@
+# Secrets — provisioned per-machine, never committed (this repo is public).
+.zsh.secrets
+*.secrets
+*.local
+.env
