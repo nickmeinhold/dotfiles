@@ -54,8 +54,8 @@ To provision a new machine, create `~/.claude/.env` (chmod 600) with the keys yo
 need, e.g.:
 
 ```sh
-export CLAUDE_REVIEWER_PAT="ghp_…"
-export CLAUDE_PM_PAT="ghp_…"
+export CLAUDE_REVIEWER_PAT="<your-github-pat>"
+export CLAUDE_PM_PAT="<your-github-pat>"
 ```
 
 `.gitignore` blocks `.env`, `*.secrets`, and `*.local` so a stray secret file can
