@@ -163,7 +163,13 @@ g() {
     base_hits=("${(@f)$(awk -F/ -v n="$arg" '$NF==n' "$_GIT_REPOS_CACHE" 2>/dev/null)}")
     if [[ ${#base_hits} -eq 1 && -n $base_hits[1] ]]; then cd "$GIT_ROOT/$base_hits[1]"; return; fi
   fi
-  pick=$(fzf --select-1 --exit-0 --height=60% --layout=reverse --border --query="$arg" \
+  # Scope fuzzy matching to the BASENAME for a bare name (no slash), so a query
+  # can't match a subsequence hopping across path segments (e.g. "augur" once
+  # matched A-dventures…meetin-G…sched-U-le-R → meeting_scheduler). A slash query
+  # keeps full-path matching, since there the intermediate segments are the point.
+  local -a scope
+  [[ $arg != */* ]] && scope=(--delimiter=/ --nth=-1)
+  pick=$(fzf --select-1 --exit-0 --height=60% --layout=reverse --border --query="$arg" "${scope[@]}" \
             --preview 'git -C $GIT_ROOT/{} log --oneline -8 --color=always 2>/dev/null; echo; ls -la $GIT_ROOT/{}' \
             < "$_GIT_REPOS_CACHE")
   if [[ -n $pick ]]; then
