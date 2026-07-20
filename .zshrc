@@ -74,9 +74,11 @@ path+=/opt/homebrew/bin
 # Added by Antigravity
 export PATH="/Users/nick/.antigravity/antigravity/bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# nvm disabled 2026-07-20 — default `node` is now the official signed build at
+# ~/.local/opt/node-v22 (Developer-ID signed, holds a durable TCC grant). ~/.nvm is
+# kept on disk because some launchd agents (call-recorder, kodamai-forward,
+# marketplace-watch, cc.aiko.signal-watcher) still call its binary by absolute path.
+export PATH="$HOME/.local/opt/node-v22/bin:$PATH"
 
 export PATH="$HOME/flutter-tizen/bin:$PATH"
 export PATH="$HOME/tizen-studio/tools:$PATH"
