@@ -87,6 +87,13 @@ export TIZEN_SDK="$HOME/tizen-studio"
 # allexport (set -a) so every KEY=val there is exported to the shell + child processes,
 # preserving the old behaviour where the PATs were exported globally.
 [[ -f ~/.claude/.env ]] && { set -a; source ~/.claude/.env; set +a; }
+# CLAUDE_CODE_OAUTH_TOKEN (added to .env 2026-07-29) is inference-only and
+# shadows the full-scope claude.ai login (auth precedence: env token > keychain),
+# which disables /remote-control in every tab launched after that date.
+# Interactive Claude Code tabs should use the login instead (also Max plan, zero
+# marginal cost); hands-free jobs that need the token source ~/.claude/.env
+# directly, so dropping it from interactive shells doesn't affect them.
+[[ -o interactive ]] && unset CLAUDE_CODE_OAUTH_TOKEN
 export SOPS_AGE_KEY_FILE="$HOME/.config/sops/age/keys.txt"
 
 ### ─── fzf: fuzzy finder ───────────────────────────────────────────────
@@ -235,3 +242,9 @@ export PATH="$HOME/.grok/bin:$PATH"
 fpath=(~/.grok/completions/zsh $fpath)
 autoload -Uz compinit && compinit -C
 # <<< grok installer <<<
+
+# kimi-code
+export PATH="/Users/nick/.kimi-code/bin:$PATH"
+
+# Added by Antigravity IDE
+export PATH="/Users/nick/.antigravity-ide/antigravity-ide/bin:$PATH"
