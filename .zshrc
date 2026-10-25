@@ -253,3 +253,11 @@ export PATH="/Users/nick/.kimi-code/bin:$PATH"
 
 # Added by Antigravity IDE
 export PATH="/Users/nick/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+export CLAUDE_CODE_PACKAGE_MANAGER_AUTO_UPDATE=1
+
+# Added by Antigravity CLI installer
+export PATH="/Users/nick/.local/bin:$PATH"
+
+# shared, root-owned model cache (see /Users/Shared/for-nick-shared-models.md)
+export HF_HUB_CACHE="/Library/Application Support/ml-models/huggingface/hub"
