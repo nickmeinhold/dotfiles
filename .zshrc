@@ -29,9 +29,6 @@ path+=~/Library/Android/sdk/cmdline-tools/latest/bin
 # add flutter to the path 
 path+=~/SDKs/flutter/bin
 
-# add dart from SDK to the path
-#path+=~/SDKs/dart-sdk/sdk/xcodebuild/ReleaseARM64
-
 # globally installed packages
 path+=~/.pub-cache/bin
 path+=~/SDKs/flutter/.pub-cache/bin
