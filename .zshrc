@@ -80,25 +80,7 @@ export PATH="$HOME/.local/opt/node-v22/bin:$PATH"
 export PATH="$HOME/flutter-tizen/bin:$PATH"
 export PATH="$HOME/tizen-studio/tools:$PATH"
 export TIZEN_SDK="$HOME/tizen-studio"
-### secrets — consolidated in ~/.claude/.env (outside this PUBLIC repo, never committed).
-# allexport (set -a) so every KEY=val there is exported to the shell + child processes,
-# preserving the old behaviour where the PATs were exported globally.
-[[ -f ~/.claude/.env ]] && { set -a; source ~/.claude/.env; set +a; }
-# CLAUDE_CODE_OAUTH_TOKEN (added to .env 2026-07-29) is inference-only and
-# shadows the full-scope claude.ai login (auth precedence: env token > keychain),
-# which disables /remote-control in every tab launched after that date.
-# Interactive Claude Code tabs should use the login instead (also Max plan, zero
-# marginal cost); hands-free jobs that need the token source ~/.claude/.env
-# directly, so dropping it from interactive shells doesn't affect them.
-# Audit 002 (1 Oct 2026): unset in EVERY shell, not just interactive ones. Claude Code's
-# command shells are non-interactive and source this file, so the old guard never fired
-# there, and `claude -p` children inherited the PERSONAL token -- Matter Material went to
-# the personal account. Hands-free jobs source ~/.claude/.env directly (see above).
-unset CLAUDE_CODE_OAUTH_TOKEN
-# claude-enspyr: run Claude Code as the Enspyr account with every other setting
-# unchanged. The token is set for that one command only, so the unset above still
-# holds for the tab. Same inference-only caveat: no /remote-control in these sessions.
-alias claude-enspyr='CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN_ENSPYR claude'
+
 export SOPS_AGE_KEY_FILE="$HOME/.config/sops/age/keys.txt"
 
 ### ─── fzf: fuzzy finder ───────────────────────────────────────────────
