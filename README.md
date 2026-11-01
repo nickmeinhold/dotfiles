@@ -55,7 +55,7 @@ need, e.g.:
 
 ```sh
 export CLAUDE_REVIEWER_PAT="<your-github-pat>"
-export CLAUDE_PM_PAT="<your-github-pat>"
+export ENSPYR_PM_TOKEN="<your-github-pat>"
 ```
 
 `.gitignore` blocks `.env`, `*.secrets`, and `*.local` so a stray secret file can
